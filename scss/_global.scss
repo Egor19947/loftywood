@@ -1,0 +1,72 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  @extend %roboto-400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #4c4c5b;
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  &.body--fixed {
+    overflow: hidden;
+  }
+  &.body--fix {
+    overflow: hidden;
+  }
+}
+
+.main {
+  flex: 1 1 auto;
+  &.main--down {
+    padding-top: 63px;
+  }
+  &.main--nodown {
+    padding-top: 0;
+  }
+}
+
+.container {
+  max-width: 985px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.title {
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.02em;
+  color: #4c4c5b;
+  @extend %roboto-400;
+  text-transform: uppercase;
+}
+
+img {
+  object-fit: cover;
+}
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
+
+.wrapper.wrapper--fix {
+  overflow: hidden;
+}
+
+input[type="text"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+textarea{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
